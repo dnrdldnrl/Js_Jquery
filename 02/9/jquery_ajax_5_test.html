@@ -14,6 +14,7 @@ $(function() {
 
 			if($items > 0){
 				$items = $items.slice(0, 10);
+				// ul
 				var $ulTag = $("<ul />");
 				$.each($items, function(i, o){
 					var $title = $(o).find("title").text();
