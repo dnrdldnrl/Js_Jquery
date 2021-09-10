@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button.add").click(function(){
+                $("p").show();
+            });
+            $("button.remove").click(function(){
+                $("p").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>메시지 : 제이쿼리를 공부하고 있습니다.</p>
+    <button class="remove">메시지 삭제</button>
+    <button class="add">메시지 생성</button>
+    
+</body>
+</html>

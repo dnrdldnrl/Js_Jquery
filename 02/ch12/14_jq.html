@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        var xWidth = 100;
+        var yHeight = 100;
+        $(document).ready(function(){
+            $("#out").click(function(){
+                $("img").hide("slow");
+            });
+            $("#in").click(function(){
+                $("img").show("slow");
+            });
+            $("#toggle").click(function(){
+                $("img").toggle("slow");
+            });
+            $("#to50").click(function(){
+                $("img").fadeTo("slow", 0.5);
+            });
+            $("#to10").click(function(){
+                $("img").fadeTo("slow", 0.1);
+            });
+            $("#to100").click(function(){
+                $("img").fadeTo("slow", 1.0);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="css_pic">
+        <button id="out">Fade_Out</button>
+        <button id="in">Fade_In</button>
+        <button id="toggle">Fade_Toggle</button>
+        <button id="to50">opacity : 50%</button>
+        <button id="to10">opacity : 90%</button>
+        <button id="to100">opacity : 0%</button>
+        <p></p>
+        <div class="">
+            <img name="pic1" src="pic1.jpg">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수</title>
+</head>
+    
+<body>
+    <p>[Car1]</p>
+    <p id="data10"></p>
+    <p id="data20"></p>
+    <p id="data30"></p>
+
+    <p>[Car2]</p>
+    <p id="data11"></p>
+    <p id="data21"></p>
+    <p id="data31"></p>
+
+    <p>[Car3]</p>
+    <p id="data12"></p>
+    <p id="data22"></p>
+    <p id="data32"></p>
+
+
+
+    <script>
+        var car = [
+            { name:'Sonata', color:'blue', speed:100},
+            { name:'Jeep', color:'red', speed:70},
+            { name:'Pasat', color:'white', speed:150}
+        ];
+
+        for(var i=0; i<3; i++){
+            var cname = document.getElementById("data1" + i);
+            cname.textContent = '자동차 이름 : ' + car[i].name;
+
+            var ccolor = document.getElementById("data2" + i);
+            cname.textContent = '자돋차 색상 : ' + car[i].color;
+
+            var cname = document.getElementById("data3" + i);
+            cname.textContent = '자동차 속도 : ' + car[i].speed;
+        }
+    </script>
+</body>
+</html>

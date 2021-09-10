@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 특정 범위에 속하는 원소 선택 splice</title>
+</head>
+<body>
+    <script>
+        var kdata = ['서울', '부산','구포','대구', '대전'];
+
+        // 0부터 몇 개 까지 삭제하고 추가
+        var str1 = kdata.splice(1, 2);  // '부산','구포'
+
+        document.write("삭제 데이터  : "+ str1 +"<p />");
+        document.write("kdata 남은 배열 : "+ kdata +"<p />");   // '서울', '대구', '대전'
+
+        var str2 = kdata.splice(1, 1, '강릉', '세종');
+        document.write("삭제 데이터  : "+ str2 +"<p />");   // 대구
+        document.write("kdata 남은 배열 : "+ kdata +"<p />");  // '서울', '강릉', '세종', '대전'
+
+        // Number.MAX_VALUE : JS에서 나타낼 수 있는 가장 큰 수
+        // Number.MIN_VALUE : JS에서 나타낼 수 있는 0에 가장 가까운 수
+        var str3 = kdata.splice(2, Number.MAX_VALUE);    
+        alert(Number.MAX_VALUE)
+        document.write("삭제 데이터  : "+ str3 +"<p />");   // 세종, 대전 
+        document.write("kdata 남은 배열 : "+ kdata +"<p />");  // 서울, 강릉 
+        </script>
+</body>
+</html>

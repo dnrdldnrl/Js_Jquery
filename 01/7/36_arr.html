@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf-처음부터, lastIndexOf-마지막 원소부터</title>
+</head>
+<body>
+    <script>
+        
+        var data = [10, 20, 30, 40, 30, 60, 70, 30, 90, 100];
+
+        document.write("배열 데이터 : [" + data + "] <p />");
+        document.write("처음 찾은 배열 데이터 : [" + data.indexOf(30) + "] <p />");
+        document.write("마지막 부터 찾은 배열 데이터 : [" + data.lastIndexOf(30) + "] <p />");
+        document.write("세번째 인덱스 부터 찾은 배열 데이터 : [" + data.indexOf(30, 3) + "] <p />");
+        document.write("처음 찾은 300 데이터 : [" + data.indexOf(77) + "] <p />");
+    </script>
+    
+</body>
+</html>

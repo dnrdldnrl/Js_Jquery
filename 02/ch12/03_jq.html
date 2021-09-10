@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 정답이 보여지면 안되니까 처음 ans 요소는 숨김
+            $("ans").hide();
+            // q1 클래스를 가진 p요소를 클릭하면?
+            $("p.q1").click(function(){
+                $("ans.q1").show();  // 숨겨져 있던 q1의 ans 요소가 보여진다.
+            });
+
+            $("ans.q1").click(function(){  // 보여진 q1의 ans 텍스트를 다시 누르면?
+                $(this).hide();  // 다시 숨겨진다.
+            });
+
+            $("p.q2").click(function(){
+                $("ans.q2").show();
+            });
+
+            $("ans.q2").click(function(){
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>질문 1 : 대한민국의 수도는 어디입니까?</h2>
+    <p class="q1">[정답보기]</p>
+    <ans class="q1">대한민국의 수도는 <strong>서울</strong>입니다.</ans>
+    <br>
+    <h2>질문 2 : 대한민국의 국보 1호는 무엇입니까?</h2>
+    <p class="q2">[정답보기]</p>
+    <ans class="q2">대한민국의 국보 1호는 <strong>숭례문</strong>입니다.</ans>
+</body>
+</html>

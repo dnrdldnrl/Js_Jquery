@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Ajax </title>
+<script src="js/jquery.js"></script>
+<script>
+$(function() {
+	$.ajax({
+		// 동일 출처의 원칙에 어긋나서 js에서 처리하지 않는다.
+		// 즉, 보여지지 x
+		url:"http://myhome.chosun.com/rss/www_section_rss.xml",
+		dataType:"xml",
+		success:function(data) {
+			console.log(data);
+		}
+	});
+});
+</script>
+</head>
+<body>
+  <div class="wrap"></div>
+</body>
+</html>

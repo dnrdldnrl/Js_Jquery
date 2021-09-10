@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 객체 조작 및 생성 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+	var result_1 = $("#sec_1").html();
+	console.log(result_1);
+	// p태그가 HTML()메소드로 인해 a태그로 바뀜
+	$("#sec_1 p").html("<a href=\"#\">Text1</a>");
+
+	// #sec_2 에 속한 자식 요소들의 모든 텍스트를 반환 
+	var result_2 = $("#sec_2").text()
+	console.log(result_2);
+	// #sec_2 에 속한 h2요소의 텍스트 내용을 "텍스트()"에서 "text()"로 바뀜
+	$("#sec_2 h2").text("text()");
+});
+</script>
+</head>
+<body>
+	<h1><strong>객체 조작 및 생성</strong></h1>
+	<section id="sec_1">
+		<h2><em>html()</em></h2>
+		<p>내용1</p>
+	</section>
+	<section id="sec_2">
+		<h2><em>텍스트()</em></h2>
+		<p>내용2</p>
+	</section>
+</body>
+</html>

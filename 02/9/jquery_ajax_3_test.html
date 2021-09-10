@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Ajax </title>
+<script src="js/jquery.js"></script>
+<script>
+// xml 데이터 처리 방법
+$(function() {
+	$.ajax({
+		url:"js/dataset.xml",
+		dataType : "xml",
+		success:function(data){
+			// dataset.xml 데이터의 record 요소 참조
+			var $data = $(data).find("record");
+			// record 요소에 데이터가 존재한다면
+			if($data.length > 0){
+				var tb = $("<table />");
+				$.each($data, function(i, o){
+					// 값 (o)에 id 요소를 참조해서 text로 반환
+					var $id =
+					$(o).find("id").text();
+
+					var $first_name =
+					$(o).find("first_name").text();
+
+					var $last_name =
+					$(o).find("last_name").text();
+
+					var $email = 
+					$(o).find("email").text();
+
+					var $gender = 
+					$(o).find("gender").text();
+
+					// 데이터를 로우에 추가하고 완성된 row를 var row 변수에 저장
+					var row = $("<tr />").append(
+						$("<td />").text($id),
+						$("<td />").text($first_name),
+						$("<td />").text($last_name),
+						$("<td />").text($email),
+						$("<td />").text($gender)
+					);
+					// 완성된 row를 테이블에 추가
+					tb.append(row);
+				});
+				// 완성된 테이블을 div 태그에 추가
+				$(".wrap").append(tb);
+			}
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<div class="wrap"></div>
+</body>
+</html>

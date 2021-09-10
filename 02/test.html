@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        "use strict";
+
+        function A() {
+            var name = "Kim";
+            if (name == "Kim")
+                console.log("Hi, Kim!");
+        };   // A함수 정의
+
+        (function A() {
+            var name = "Lee";
+            if (name == "Lee")
+                console.log("Hi, Lee!");
+        }());   // A함수 즉시 실행 후 소멸
+
+        {  // Block Scope
+            var a = 10;  // var 타입은 block scope가 적용되지 않는다.
+            let A = function() {
+            var name = "Park";
+            if (name == "Park")
+                console.log("Hi, Park!");
+            };
+            
+            A();
+        }
+
+        console.log(a);   // 정상출력
+        A();   // name이 jeong으로 재정의된 함수 A가 실행
+
+        function A() {
+            var name = "Jeong";
+            if (name == "Jeong")
+                console.log("Hi, Jeong!");
+        };
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

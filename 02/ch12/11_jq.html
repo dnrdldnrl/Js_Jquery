@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        var xWidth = 100;
+        var yHeight = 100;
+        $(document).ready(function(){
+            $("button.b1").click(function(){
+                $("img").animate({
+                    width : "100px"
+                });
+            });
+            $("button.b2").click(function(){
+                $("img").animate({
+                    width : "200px"
+                });
+            });
+            $("button.b3").click(function(){
+                $("img").animate({
+                    width : "300px"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="css_pic">
+        버튼을 누르면 그림의 크기가 바뀝니다.
+        <button class="b1">가로 100px</button>
+        <button class="b2">가로 200px</button>
+        <button class="b3">가로 300px</button>
+        <div class="">
+            <img name="pic1" src="pic1.jpg">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop $ push</title>
+</head>
+<body>
+    <script>
+        var kdata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var sum = 0;
+        function addArr(value){
+            sum += value;
+        }
+
+        kdata.forEach(addArr);   // Array.forEach(function) ==> 각 배열 요소 하나하나에 대해 함수의 파라미터로 넘어감.
+
+        document.write("배열 데이터 합 : " + sum + "<p />");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        var n = 0;
+        $(document).ready(function(){
+            $("div.out").mouseenter(function(){  // 마우스 커서가 들어오면(클릭 x)
+                $("p:first", this).text("마우스 포인트 들어옴");
+                $("p:last", this).text(++n);
+                if(n == 50){
+                    $("div.out").css("background-color", "green")
+                    .css("color", "white");
+                }
+                else if(n == 100){
+                    $("div.out").css("background-color", "red")
+                    .css("color", "white");
+                }
+            });
+            $("div.out").mouseleave(function(){  // 마우스 커서가 떠나면
+                $("p:first", this).text("마우스 포인트 나감");
+                $("p:last", this).text("최종 횟수 : " + n);
+            });
+            
+        });
+    </script>
+    <style>
+        div.out{
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000000;
+            text-align: center;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <p>마우스 이벤트 알아보기</p>
+        <p>0</p>
+    </div>
+</body>
+</html>

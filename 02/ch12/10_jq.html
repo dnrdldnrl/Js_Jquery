@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        var xWidth = 100;
+        var yHeight = 100;
+        $(document).ready(function(){
+            $("div").click(function(){  // 마우스 커서가 들어오면(클릭 x)
+                $(this).width(xWidth).addClass("box");
+                $(this).height(yHeight).addClass("box");
+                xWidth-=10;
+                yHeight-=10;
+            });            
+        });
+    </script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 7px;
+            background-color: yellow;
+        }
+        .box{
+            background: red;
+
+        }
+    </style>
+</head>
+<body>
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+    <div>박스6</div>
+</body>
+</html>

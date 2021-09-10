@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="js/jquery.js"></script>
+<script>
+$(function( ) {
+	// e.preventDeFault
+	// a태그의 링크이동이나, form 태그 안 input의 데이터 전송 등 고유 동작을 중단시키는 역할
+	$(".btn1").on("click", function(e){
+		e.preventDefault();
+		$(".txt1")
+		.css({"background-color" : "#ff0"});
+	});
+
+	$(".btn2").on("click", function(e){
+		$(".txt2")
+		.css({"background-color" : "#0ff"});
+		return false;  // a링크의 고유 기능인 링크이동을 중단시킨다.
+	});
+	// dblclick : 마우스를 더블클릭하면 방생하는 이벤트
+	$(".btn3").on("dblclick", function(){
+		$(".txt3")
+		.css({"background-color" : "#0f0"});
+	});
+});
+</script>
+</head>
+<body>
+	<p><a href="http://www.easyspub.co.kr/" class="btn1">버튼1</a></p>
+	<p class="txt1">내용1</p>
+	<p><a href="http://www.easyspub.co.kr/" class="btn2">버튼2</a></p>
+	<p class="txt2">내용2</p>
+	<p><button class="btn3">버튼3</button></p>
+	<p class="txt3">내용3</p>
+</body>
+</html>

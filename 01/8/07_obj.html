@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수</title>
+</head>
+    
+<body>
+    <p>[Hong's Car]</p>
+    <p id="carname"></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+
+    <p>[Kim's Car]</p>
+    <p id="carname1"></p>
+    <p id="carcolor1"></p>
+    <p id="carspeed1"></p>
+
+
+    <script>
+        function Car(name, color, speed) {   // 생성자 함수
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+
+            this.speedUp = function(){
+                return this.speed + 10;
+            }
+
+            this.speedDown = function(){
+                return this.speed - 10;
+            }
+        };
+
+        var HongCar = new Car('Sonata', 'blue', 100);
+        var KimCar = new Car('Jeep', 'red', 70);
+
+        var cname = document.getElementById("carname");
+        cname.textContent = '자동차 이름 : ' + HongCar.name;
+        var ccolor = document.getElementById("carcolor");
+        ccolor.textContent = '자동차 색상 : ' + HongCar.color;
+        var cspeed = document.getElementById("carspeed");
+        cspeed.textContent = '자동차 속도 : ' + HongCar.speedUp();
+        
+        var cname = document.getElementById("carname1");
+        cname.textContent = '자동차 이름 : ' + KimCar.name;
+        var ccolor = document.getElementById("carcolor1");
+        ccolor.textContent = '자동차 색상 : ' + KimCar.color;
+        var cspeed = document.getElementById("carspeed1");
+        cspeed.textContent = '자동차 속도 : ' + KimCar.speedUp();
+    </script>
+</body>
+</html>

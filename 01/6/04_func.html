@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수 호출하기</title>
+    
+</head>
+<body>
+    <script>
+        var printMsg = function(msg){    // 익명함수
+            document.write("익명함수 : "+msg+"<br>");
+        }
+
+        function printMsg(name, age){
+            document.write("기본함수 : <b>" + msg + "</b><br>");
+        }
+        printMsg('호출되었습니다.'); // 똑같은 이름이라면 익명함수가 우선으로 호출된다.
+    </script>
+</body>
+</html>

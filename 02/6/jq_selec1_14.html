@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	// parent() : 직계부모 요소
+	$(function(){
+		$(".txt1").parents()    // .txt1 상위 요소 전부 다 적용
+		.css({"border":"2px dashed #00f"});
+
+		$(".txt2").parents("div")   // .txt1 상위 요소 중 div 태그만 적용
+		.css({"border":"2px solid #f00"});
+	});
+</script>
+</head>
+<body>
+	<h1 class="title">선택자</h1>
+	<section>
+		<div>
+			<p class="txt1">내용</p>
+		</div>
+	</section>
+	<section>
+		<div>
+			<p class="txt2">내용</p>
+		</div>
+	</section>
+</body>
+</html>
