@@ -28,9 +28,21 @@
 <script src="js/jquery.js"></script>
 <script src="js/jquery.cookie.js"></script>
 <script>
-$(function() {
+	$(function() {
+		if($.cookie("popup") == "none"){
+			$("$notice_wrap").hide();
+		}
 
-});
+		var $expChk = $("expiresChk");
+		$(".closeBtn").on("click", closePop);
+
+		function closePop(){
+			if($expChk.is(":checked")){
+				$.cookie("popup", "none", {exires:3, path:"/"});
+			}
+			$("$notice_wrap").fadeOut("fast");
+		}
+	});
 </script>
 </head>
 <body>
